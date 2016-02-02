@@ -1,0 +1,69 @@
+#include <iostream>
+#include "Cember.h"
+#include "Dikdortgen.h"
+using namespace std;
+
+void main(){
+	// Ucgen i?lemleri
+	Cember C1;
+	Cember C2(4, 5, 7, true, "kirmizi");
+
+	cout << "*********************************************************" << endl;
+	cout << "1. Cemberin Merkez Noktasi = (" << C1.x_dondur() << "," << C1.y_dondur() << ")" << endl;
+	cout << "1. Cemberin alani = " << C1.alanHesapla() << endl;
+	cout << "1. Cemberin cevresi = " << C1.cevreHesapla() << endl;
+	if (C1.icerir(2, 2)){
+		cout << "(2,2) Noktasi 1. Cemberin icindedir" << endl;
+	}
+	else{
+		cout << "(2,2) Noktasi 1. Cemberin icinde degildir" << endl;
+	}
+	cout << C1.Yazdir();
+	cout << "*********************************************************" << endl;
+	cout << "2. Cemberin Merkez Noktasi = (" << C2.x_dondur() << "," << C2.y_dondur() << ")" << endl;
+	cout << "2. Cemberin alani = " << C2.alanHesapla() << endl;
+	cout << "2. Cemberin cevresi = " << C2.cevreHesapla() << endl;
+	if (C2.icerir(2, 2)){
+		cout << "(2,2) Noktasi 2. Cemberin icindedir" << endl;
+	}
+	else{
+		cout << "(2,2) Noktasi 2. Cemberin icinde degildir" << endl;
+	}
+	cout << C2.Yazdir();
+	cout << "*********************************************************" << endl<<endl;
+	cout << "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl << endl;
+
+	// Dikd?rtgen i?lemleri
+	Dikdortgen D1;
+	Dikdortgen D2(3, 4, 11, 8, true, "mavi");
+
+	cout << "*********************************************************" << endl; 
+	cout << "1. Dikdorgenin Merkez Noktasi = (" << D1.x_dondur() << "," << D1.y_dondur() << ")" << endl;
+	cout << "1. Dikdorgenin Yuksekligi = " << D1.yukseklik_dondur() << endl;
+	cout << "1. Dikdortgenin Genisligi = " << D1.genislik_dondur() << "\n";
+	cout << "1. Dikdorgenin alani = " << D1.alanHesapla() << endl;
+	cout << "1. Dikdorgenin cevresi = " << D1.cevreHesapla() << endl;
+	if (D1.icerir(2, 2)){
+		cout << "(2,2) Noktasi 1. Dikdortgenin icindedir" << endl;
+	}
+	else{
+		cout << "(2,2) Noktasi 1. Dikdortgenin icinde degildir" << endl;
+	}
+	cout << D1.Yazdir();
+	cout << "*********************************************************" << endl;
+	cout << "2. Dikdorgenin Merkez Noktasi = (" << D2.x_dondur() << "," << D2.y_dondur() << ")" << endl;
+	cout << "2. Dikdorgenin Yuksekligi = " << D2.yukseklik_dondur() << endl;
+	cout << "2. Dikdortgenin Genisligi = " << D2.genislik_dondur() << "\n";
+	cout << "2. Dikdorgenin alani = " << D2.alanHesapla() << endl;
+	cout << "2. Dikdorgenin cevresi = " << D2.cevreHesapla() << endl;
+	if (D2.icerir(2, 2)){
+		cout << "(2,2) Noktasi 2. Dikdortgenin icindedir" << endl;
+	}
+	else{
+		cout << "(2,2) Noktasi 2. Dikdortgenin icinde degildir" << endl;
+	}
+	cout << D2.Yazdir();
+	cout << "*********************************************************" << endl;
+
+	system("pause");
+}
